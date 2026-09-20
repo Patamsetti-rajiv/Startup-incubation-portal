@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .animate-delay-100 {
+    animation-delay: 100ms;
+  }
+  .animate-delay-200 {
+    animation-delay: 200ms;
+  }
+  .animate-delay-300 {
+    animation-delay: 300ms;
+  }
+  .animate-delay-500 {
+    animation-delay: 500ms;
+  }
+  .animation-fill-back {
+    animation-fill-mode: backwards;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.4);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.6);
+}
+
+/* Shimmer loading skeleton */
+.shimmer-bg {
+  background: linear-gradient(
+    90deg,
+    rgba(241, 245, 249, 1) 0%,
+    rgba(226, 232, 240, 1) 50%,
+    rgba(241, 245, 249, 1) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s linear infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
